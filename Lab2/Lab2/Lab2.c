@@ -33,7 +33,7 @@ func_one(char * j)//this is for part one bss to stack
 	scanf_s("%s", j);//this will be on the stack
 	return 0;
 }
-func_two()
+func_two()//this is for part two
 {
 	char *sth = "ABCDEFGHIJKLM";//this is on the stack
 	return sth;
