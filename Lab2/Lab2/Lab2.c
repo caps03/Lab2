@@ -2,8 +2,10 @@
 #include <stdio.h>
 #include <string.h>
 
-#pragma bss_seg(".myBSS")  
-char* j;                     // stored in "my_data1" 
+#pragma bss_seg(".myBSS1")  
+char* j;    //store in a bss secction called .myBSS1
+#pragma bss_seg(".myBSS2")
+char  *da;	//store in a bss secction called .myBSS2
 
 main() 
 {
@@ -18,6 +20,12 @@ main()
 	//Part Three
 	char* sth = malloc(14);//this is on the heap
 	sth = func_two();
+
+	//Part Four
+	char *d = "ABCDEFGHIJKLMN";// in the data section
+	da = d;
+	d = NULL;
+	da = NULL;
 }
 func_one(char * j)//this is for part one bss to stack
 {
