@@ -7,8 +7,13 @@ char* j;                     // stored in "my_data1"
 
 main() 
 {
-	//s2h starts in the bss section because it is uninitialized
+	//Part One
 	int i = func_one(j);
+
+	//Part Two
+	char *heap = malloc(13);//this is on the heap
+	heap = "ABCDEFGHIJKL";
+	char *data = heap;//in the data section
 }
 func_one(char * j)//this is for part one bss to stack
 {
